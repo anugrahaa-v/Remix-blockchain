@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Simple Storage DApp (Simulation)</title>
+  <style>
+    body { font-family: Arial; max-width:600px; margin:40px auto; }
+    input, button { padding:8px 12px; margin:6px 0; }
+  </style>
+</head>
+<body>
+  <h1>Simple Storage DApp (Simulation)</h1>
+
+  <label>Number to store:</label><br>
+  <input type="number" id="numberInput" placeholder="Enter a number">
+  <button id="setNumber">Set Number</button>
+
+  <hr>
+
+  <button id="getNumber">Get Stored Number</button>
+  <p id="output">Stored Number: 0</p>
+
+  <script>
+    // Simulated blockchain variable
+    let storedNumber = 0;
+
+    // Set number
+    document.getElementById("setNumber").onclick = () => {
+      const num = parseInt(document.getElementById("numberInput").value);
+      if (isNaN(num)) return alert("Enter a valid number!");
+      storedNumber = num;
+      alert("Number stored successfully!");
+    };
+
+    // Get number
+    document.getElementById("getNumber").onclick = () => {
+      document.getElementById("output").innerText = "Stored Number: " + storedNumber;
+    };
+  </script>
+</body>
+</html>
