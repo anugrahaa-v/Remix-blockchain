@@ -1,0 +1,2 @@
+let contractAddress = "PASTE_YOUR_CONTRACT_ADDRESS_HERE";
+let contractABI = [PASTE_YOUR_ABI_HERE];
